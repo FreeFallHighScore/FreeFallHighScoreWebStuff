@@ -4,10 +4,8 @@ one:
   provider: MyString
   uid: MyString
   name: MyString
-  email: MyString
 
 two:
   provider: MyString
   uid: MyString
   name: MyString
-  email: MyString
