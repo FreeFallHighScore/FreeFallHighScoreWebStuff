@@ -1,0 +1,20 @@
+<div id="navigationContainer"></div>
+<div class="navigation">
+  <div class="activeNavigation">
+    <%= render "/layouts/pages" %>
+  </div>
+  <%= render "/layouts/pages" %>
+</div>
+
+<%= content_for :javascript do %>
+<script type="text/javascript">
+  $(function () {
+      $(".navigation > .buttonsContainer .naviBtn").click(function () {
+        //$(this).addClass('clicked');
+        $(this).animate({position: 'absolute', 'left': '-400px'}, 5000, function () { document.location = $(this).attr('href')});
+        $(".activeNavigation .naviBtn").fadeOut('medium');
+        return false;
+      });
+ });
+</script>
+<% end %>

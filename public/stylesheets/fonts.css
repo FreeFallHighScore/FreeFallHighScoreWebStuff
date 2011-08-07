@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'GBBOOTRegular';
+    src: url('/fonts/gbb.eot');
+    src: url('/fonts/gbb.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/gbb.woff') format('woff'),
+         url('/fonts/gbb.ttf') format('truetype'),
+         url('/fonts/gbb.svg#GBBOOTRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="google-site-verification" content="s5Ky2Ssdh1j3mzdOWmsvSVDoBLV_HCwk7n7gF_ebwPs" />
-  <title>FreeFallHighScoreWebStuff</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
+  <head>
+    <meta name="google-site-verification" content="s5Ky2Ssdh1j3mzdOWmsvSVDoBLV_HCwk7n7gF_ebwPs" />
+    <title>FreeFall High Score</title>
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body class="<%= controller.controller_name %> <%= controller.action_name %>">
+    <%= render "/layouts/header" %>
 
-<%= yield %>
+    <div id="content">
+      <%= yield %>
+      <div class="clear"></div>
+    </div>
 
-</body>
+    <div id="cloudsBottom" class="clear"></div>
+    <%= yield :javascript %>
+  </body>
 </html>
