@@ -262,6 +262,12 @@ h1 {
   margin-left: 32px;
 }
 
-.index .container .video p {
+.disclaimer .container p {
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 16px;
+  width: 530px;
+}
 
+.index .container .video p {
 }
