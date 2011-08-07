@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   def cities
   end
 
-  def events
+  def about
   end
 
   def lifevests

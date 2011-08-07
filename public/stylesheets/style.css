@@ -7,6 +7,9 @@ body {
   font-family: Helvetica;
   color: white;
 }
+body p {
+  font-family: 'Helvetica Neue';
+}
 #cloudsTop {
   background: url('/images/cloudsBottom.png') no-repeat 0 0;
   position:absolute;
@@ -60,7 +63,7 @@ body {
   width:163px;
   height:42px;
   margin:0px 3px;
-  display:block;
+  display:none;
   float:left;
 }
 .navigation { height: 30px; }
@@ -138,7 +141,6 @@ body {
 .activeNavigation .buttonsContainer {
   float: left;
 }
-
 .naviBtn.clicked {
   background: rgb(226,148,74);
   color:#fff;
@@ -153,7 +155,7 @@ body {
 body.index      .naviBtn.index,
 body.lifevests  .naviBtn.lifevests,
 body.cities     .naviBtn.cities,
-body.events     .naviBtn.events,
+body.about     .naviBtn.about,
 body.disclaimer .naviBtn.disclaimer {
   display: none;
 }
@@ -161,7 +163,7 @@ body.disclaimer .naviBtn.disclaimer {
 body.index      .activeNavigation .naviBtn.index,
 body.lifevests  .activeNavigation .naviBtn.lifevests,
 body.cities     .activeNavigation .naviBtn.cities,
-body.events     .activeNavigation .naviBtn.events,
+body.about     .activeNavigation .naviBtn.about,
 body.disclaimer .activeNavigation .naviBtn.disclaimer {
   float: left;
   display: inline;
@@ -240,4 +242,22 @@ h1 {
   line-height: 36px;
   font-weight: normal;
   letter-spacing: 3px;
+}
+
+.video {
+  margin-bottom: 32px;
+}
+
+.index .container {
+}
+
+.about .container p {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 1in;
+  width: 830px;
+}
+
+.about .container p img {
+  margin-left: 32px;
 }

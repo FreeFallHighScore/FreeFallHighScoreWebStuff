@@ -4,7 +4,7 @@ FreeFallHighScoreWebStuff::Application.routes.draw do
 
   get "/cities" => "home#cities"
   get "/lifevests" => "home#lifevests"
-  get "/events" => "home#events"
+  get "/about" => "home#about"
   get "/disclaimer" => "home#disclaimer"
 
   root :to => "home#index"
