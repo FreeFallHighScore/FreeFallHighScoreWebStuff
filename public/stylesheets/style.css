@@ -127,9 +127,6 @@ body p {
   font-size: 14px;
   text-transform: uppercase;
 }
-.naviBtn.last {
-  margin-right: 5px;
-}
 .buttonsContainer {
   float: right;
   margin: auto;
@@ -137,9 +134,11 @@ body p {
   height: 23px;
   z-index: 10;
   position: relative;
+  padding-right: 5px;
 }
 .activeNavigation .buttonsContainer {
   float: left;
+  padding-right: 0;
 }
 .naviBtn.clicked {
   background: rgb(226,148,74);
