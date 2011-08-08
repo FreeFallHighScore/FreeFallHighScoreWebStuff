@@ -146,6 +146,7 @@ body p {
   color:#fff;
   text-decoration: none;
 }
+.naviBtn.active,
 .naviBtn:hover {
   background: rgb(226,148,74);
   color:#fff;
@@ -155,7 +156,7 @@ body p {
 body.index      .naviBtn.index,
 body.lifevests  .naviBtn.lifevests,
 body.cities     .naviBtn.cities,
-body.about     .naviBtn.about,
+body.about      .naviBtn.about,
 body.disclaimer .naviBtn.disclaimer {
   display: none;
 }
