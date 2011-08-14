@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="title">
+    <h1>High Score Leaderboard</h1>
+  </div>
+
+  <% @videos.each do |v| %>
+    <div class="video">
+      <iframe width="480" height="390" src="http://www.youtube.com/embed/<%= v.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+      <p>By: <%= v.author %> &mdash; <%= v.drop_time %>ms (<%= v.location %>)</p>
+    </div>
+  <% end %>
+</div>
+

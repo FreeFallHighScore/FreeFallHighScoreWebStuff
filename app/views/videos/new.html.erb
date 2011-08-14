@@ -1,0 +1,11 @@
+<%= form_for @video do |f| %>
+  <div>
+    <%= f.label :youtube_id, "YouTube video ID" %>
+    <%= f.text_field :youtube_id %>
+  </div>
+
+  <div>
+    <%= f.label :length %>
+    <%= f.text_field :length %>
+  </div>
+<% end %>

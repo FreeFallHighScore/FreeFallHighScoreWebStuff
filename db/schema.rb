@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110806205223) do
+ActiveRecord::Schema.define(:version => 20110814192619) do
 
   create_table "users", :force => true do |t|
     t.string   "provider"
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(:version => 20110806205223) do
     t.integer  "length"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "author"
+    t.string   "location"
+    t.integer  "drop_time"
+    t.string   "device"
+    t.string   "title"
+    t.text     "description"
+    t.datetime "published_at"
   end
+
+  add_index "videos", ["author"], :name => "index_videos_on_author"
+  add_index "videos", ["youtube_id"], :name => "index_videos_on_youtube_id", :unique => true
 
 end
