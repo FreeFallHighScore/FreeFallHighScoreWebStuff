@@ -1,10 +1,10 @@
 desc "import youtube videos. this should be run often. just not too often."
 task :import_youtube_videos => :environment do |e|
-  url = ENV["VIDEO_QUERY_STRING"] + "&max-results=50"
+  raise "HELL" unless ENV["YOUTUBE_DEV_TAG"] and ENV["YOUTUBE_DEV_KEY"]
 
-  raise "HELL" unless ENV["VIDEO_QUERY_STRING"]
-  url = ENV["VIDEO_QUERY_STRING"] + "&max-results=50&alt=jsonc&v=2"
-  #url = "https://gdata.youtube.com/feeds/api/videos/?q=freefallhighscore&key=AI39si7H3MXz-tQpyTjyqa5BnHlNVqVWB9YAubils0HqAbETSafztzK1-_nGM5pg5Lv9xcATljHho5VCEP40lnm-kjWRvVNxZQ&max-results=5&alt=jsonc&v=2"
+  base_url = "https://gdata.youtube.com/feeds/api/videos/?#{ENV["YOUTUBE_DEV_TAG"]}&key=#{ENV["YOUTUBE_DEV_KEY"]}"
+
+  url = base_url + "&max-results=50&alt=jsonc&v=2"
 
   start = 1
   items = 0
@@ -15,7 +15,6 @@ task :import_youtube_videos => :environment do |e|
   while (start + items) < total
     start += items
     my_url = url + "&start-index=#{start}"
-    puts "URL: #{my_url}"
 
     doc = open(my_url)
     data = ActiveSupport::JSON.decode(doc)["data"]
