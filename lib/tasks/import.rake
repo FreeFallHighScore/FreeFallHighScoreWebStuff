@@ -10,8 +10,6 @@ task :import_youtube_videos => :environment do |e|
   items = 0
   total = 50
 
-  output_string = ""
-
   while (start + items) < total
     start += items
     my_url = url + "&start-index=#{start}"
@@ -45,10 +43,8 @@ task :import_youtube_videos => :environment do |e|
       end
 
       unless video.save
-        puts "THERE WAS AN ERROR SAVING #{video.inspect}"
+        STDERR.puts "THERE WAS AN ERROR SAVING #{video.inspect}"
       end
     end
   end
-
-  puts output_string
 end
