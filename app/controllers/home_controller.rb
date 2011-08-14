@@ -1,5 +1,3 @@
-require 'lib/hash'
-
 class HomeController < ApplicationController
   def index
   end
