@@ -124,6 +124,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.29)
+    youtube_it (1.4.3)
+      builder
+      oauth (>= 0.4.4)
 
 PLATFORMS
   ruby
@@ -133,3 +136,4 @@ DEPENDENCIES
   pg
   rails (= 3.0.9)
   rake (= 0.8.7)
+  youtube_it
