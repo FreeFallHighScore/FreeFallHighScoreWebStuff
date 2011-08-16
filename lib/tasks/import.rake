@@ -1,3 +1,10 @@
+desc "remova all video objects in db"
+task :remove_videos => :environment do |e|
+  Video.all.each do |v|
+    v.destroy
+  end
+end
+
 desc "import youtube videos. this should be run often. just not too often."
 task :import_youtube_videos => :environment do |e|
   raise "HELL" unless ENV["YOUTUBE_DEV_TAG"] and ENV["YOUTUBE_DEV_KEY"]
@@ -32,13 +39,31 @@ task :import_youtube_videos => :environment do |e|
 
       v["developerTags"].each do |cat|
         case cat
+        #"developerTags":
+        #  [
+        #    "freefallhighscore",
+        #    "dur:0.684336",
+        #    "lat:+40.714452",
+        #    "lon:-73.936149",
+        #    "mak:iPhone",
+        #    "sys:iPhone OS",
+        #    "ver:4.3"
+        #],
         when "freefallhighscore"
         when /dur:(.*)$/
           video.drop_time = $1
-        when /loc:(.+)$/
-          video.location = $1
-        when /dev:(.+)$/
-          video.device = $1
+        when /lat:(.+)$/
+          video.latitude = $1
+        when /lon:(.+)$/
+          video.longitude = $1
+        when /mak:(.+)$/
+          video.make = $1
+        when /sys:(.+)$/
+          video.system = $1
+        when /ver:(.+)$/
+          video.version = $1
+        else
+          STDERR.puts "A tag found that isn't supported!: #{cat}"
         end
       end
 

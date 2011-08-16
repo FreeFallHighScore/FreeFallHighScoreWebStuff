@@ -6,7 +6,7 @@
   <% @videos.each do |v| %>
     <div class="video">
       <iframe width="480" height="390" src="http://www.youtube.com/embed/<%= v.youtube_id %>" frameborder="0" allowfullscreen></iframe>
-      <p>By: <%= v.author %> &mdash; <%= v.drop_time %>ms (<%= v.location %>)</p>
+      <p>By: <%= v.author %> &mdash; <%= v.drop_time %>ms (<%= v.latitude %>, <%= v.longitude %>)</p>
     </div>
   <% end %>
 </div>

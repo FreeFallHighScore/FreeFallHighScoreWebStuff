@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   end
 
   def test
-    @videos = Video.by_drop_time
+    @videos = Video.all
   end
 
   def about
