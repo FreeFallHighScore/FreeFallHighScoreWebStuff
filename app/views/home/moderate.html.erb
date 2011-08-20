@@ -1,0 +1,32 @@
+<% if @videos.any? %>
+  <table cellpadding="1" cellmargin="1">
+    <tr>
+      <th>User</th>
+      <th>Video ID</th>
+      <th>Play in youtube</th>
+      <th>Drop</th>
+      <th>Date</th>
+      <th>Action</th>
+    </tr>
+    <% @videos.each do |v| %>
+      <tr>
+        <td><%= v.author %></td>
+        <td><%= v.youtube_id %></td>
+        <td>
+          <%= link_to "Go", "http://www.youtube.com/watch?v=#{v.youtube_id}", :target => '_blank' %>
+        </td>
+        <td><%= v.drop_time %>ms</td>
+        <td><%= v.published_at %></td>
+        <td>
+          <%= form_for v, :url => enable_video_path(v) do |f| %>
+            <%= f.submit "Enable" %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= render 'pagination' %>
+<% else %>
+  <p>No disabled videos. Check back soon!</p>
+<% end %>

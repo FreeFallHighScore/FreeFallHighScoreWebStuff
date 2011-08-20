@@ -1,0 +1,13 @@
+<div class="video">
+  <iframe width="480" height="390" src="http://www.youtube.com/embed/<%= video.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+  <p>
+    By: <%= video.author %> &mdash; <%= video.drop_time %>ms (<%= video.latitude %>, <%= video.longitude %>), on <%= video.published_at.strftime("%D") %>
+  </p>
+  <% if current_user and current_user.admin? %>
+    <div class="disable">
+      <%= form_for video, :url => disable_video_path(video) do |f| %>
+        <%= f.submit "Disable" %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

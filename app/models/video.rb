@@ -1,4 +1,4 @@
 class Video < ActiveRecord::Base
-  default_scope :order => 'title DESC'
+  default_scope :order => 'drop_time DESC'
 end
 

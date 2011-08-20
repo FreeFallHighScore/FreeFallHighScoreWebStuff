@@ -11,11 +11,22 @@
     <%= render "/layouts/header" %>
 
     <div id="content">
+      <% if current_user %>
+        <div class="account-box">
+          <% if current_user.admin? %>
+            ADMIN:
+          <% end %>
+          <%= current_user.name %><br/>
+          <%= link_to "Sign Out", :signout %><br/>
+          <%= link_to "Moderate", :moderate if current_user.admin? and controller.action_name != 'moderate' %>
+        </div>
+      <% end %>
+
       <%= yield %>
       <div class="clear"></div>
     </div>
 
     <div id="cloudsBottom" class="clear"></div>
-    <%= yield :javascript %>
+    <%= render '/layouts/javascript' %>
   </body>
 </html>

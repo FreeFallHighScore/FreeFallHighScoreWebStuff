@@ -35,7 +35,8 @@ task :import_youtube_videos => :environment do |e|
         :description => v["description"],
         :author => v["uploader"],
         :published_at => v["uploaded"],
-        :length => v["duration"]
+        :length => v["duration"],
+        :disabled => false
 
       v["developerTags"].each do |cat|
         case cat

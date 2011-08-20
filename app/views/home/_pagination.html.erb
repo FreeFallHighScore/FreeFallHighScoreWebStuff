@@ -1,0 +1,6 @@
+<div class="pagination">
+  <div clas="page_info">
+    <%= page_entries_info(@videos).html_safe %>
+  </div>
+  <%= will_paginate @videos, :container => false %>
+</div>

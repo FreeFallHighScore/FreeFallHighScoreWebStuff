@@ -1,0 +1,11 @@
+<script type="text/javascript">
+  <% if current_user and current_user.admin? %>
+    var admin = true;
+  <% else %>
+    var admin = false;
+  <% end %>
+
+</script>
+
+<%= javascript_include_tag 'navigation' %>
+<%= yield :javascript %>
