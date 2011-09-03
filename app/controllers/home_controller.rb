@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   before_filter :validate, :only => [:moderate]
+
   def index
     get_videos
   end
@@ -17,17 +18,6 @@ class HomeController < ApplicationController
   end
 
   def disclaimer
-  end
-
-  def videos
-    respond_to do |f|
-      f.json { render :json => Video.where("disabled = ?", false).map{ |v|
-        v.attributes.merge({
-          "video_url" => "http://www.youtube.com/watch?v=#{v.youtube_id}",
-          "thumbnail_url" => "http://i.ytimg.com/vi/#{v.youtube_id}/default.jpg"
-        })
-      }.to_json }
-    end
   end
 
   private

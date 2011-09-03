@@ -6,13 +6,16 @@ FreeFallHighScoreWebStuff::Application.routes.draw do
   get "/about"      => "home#about"
   get "/disclaimer" => "home#disclaimer"
   get "/moderate"   => "home#moderate"
-  get "/videos"     => "home#videos"
 
-  resources :videos, :only => [] do
+  resources :videos, :only => [:index] do
     member do
       put :enable
       put :disable
     end
+  end
+
+  resources :users, :only => [] do
+    get :videos
   end
 
   root :to => "home#index"
