@@ -90,12 +90,14 @@
 		<script src="js/fileuploader.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
+				/*
 				$('#left_sb').stickyScroll({
 					container : $('#wrapper')
 				});
 				$('#right_sb').stickyScroll({
 					container : $('#wrapper')
 				});
+			 	*/
 			 	
 			 	$("#contestForm").validate({
 			 		rules: {
@@ -201,18 +203,12 @@
 				<div id="logo"></div>
 				<div id="social">
 					<ul>
-						<li>
-							<a href="http://facebook.com"><img src="images/facebook.png"></a>
-						</li>
-						<li>
-							<a href="http://youtube.com"><img src="images/youtube.png"></a>
-						</li>
-						<li>
-							<a href="http://twitter.com"><img src="images/twitter.png"></a>
-						</li>
-						<li>
-							<a href="http://google.com"><img src="images/google.png"></a>
-						</li>
+						<li><a href="http://www.facebook.com/freefallhighscore"><img src="images/facebook.png"></a></li>
+						<li><a href="https://twitter.com/#!/freefallhiscore"><img src="images/twitter.png"></a></li>
+						<!--
+						<li><a href="http://twitter.com"><img src="images/twitter.png"></a></li>
+						<li><a href="http://google.com"><img src="images/google.png"></a></li>
+						-->
 					</ul>
 				</div>
 				<div id="navigation">
@@ -223,11 +219,13 @@
 					<a href="#fineprint" class="navi">FINE PRINT</a>
 					</ul>
 				</div>
+				<!--
 				<div id="examples">
 					<div class="example_item">
 						<img src="images/preserver1.png">
 					</div>
 				</div>
+				-->
 			</div>
 			<!-- end left_sb -->
 			<div id="content">
@@ -247,7 +245,7 @@
 						<label class="inputlabel" for="city">City: </label><input type="text" name="city">
 					</p>
 					<p>
-						<strong>note: if you are not in new york city area you'll need to be able to ship the preserver to us by the time of the event</strong>
+						<strong>if you are not in new york city area you'll need to be able to ship the preserver to us by the time of the event</strong>
 					</p>
 					<br clear="all">
 					<br clear="all">
@@ -257,7 +255,7 @@
 						<label class="inputlabel">Preserver Name: </label><input type="text" name="preservername">
 					</p>
 					<p>
-						Describe how you made your preserver and how it works
+						Describe how you made your preserver and how it works.
 					</p>
 					<p>
 						<textarea cols="60" rows="10" name="description"></textarea>
@@ -276,13 +274,13 @@
 					<input type="hidden" name="file3" id="hiddenFile3" />
 					<br clear="all">
 					<p>
-						paste in an optional youtube or vimeo link to give some more detail
+						Paste in an optional youtube or vimeo link for more detail.
 					</p>
 					<p>
 						<input type="text" name="detaillink" style="width:300px;">
 					</p>
 					<p>
-						any additional comments or stuff we should know?
+						Do you have any additional comments or stuff we should know?
 					</p>
 					<p>
 						<textarea cols="60" rows="10" name="comments"></textarea>
@@ -302,6 +300,7 @@
 				<br clear="all" />
 			</div>
 			<!-- end content -->
+			
 			<div id="right_sb">
 				<div id="sbHeader">
 					<span>Overview</span>
@@ -309,24 +308,11 @@
 				<div id="sbBody">
 					<span class="sbTextHeader"> Brief in Brief </span>
 					<ul class="bullet">
-						<li>
-							Freefall means *free fall*
-						</li>
-						<li>
-							Preserver cannot obstruct the camera from recording video
-						</li>
-						<li>
-							Timelimit - 20 sec between hitting "go" and drop
-						</li>
-						<li>
-							One shot per entry
-						</li>
-						<li>
-							Survive a drop from upwards of 140 feet
-						</li>
-						<li>
-							Points for smarts, style, and creativity.
-						</li>
+						<li>Points for smarts, style, and creativity.</li>
+						<li>The Preserver cannot obstruct the camera from recording video</li>
+						<li>Timelimit - 20 sec between hitting "go" and drop</li>
+						<li>One shot per entry</li>
+						<li>Survive a drop from upwards of 140 feet</li>
 					</ul>
 					<br>
 					<span class="sbTextHeader"> Deadline </span>
