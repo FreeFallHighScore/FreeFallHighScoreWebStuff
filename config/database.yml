@@ -19,6 +19,8 @@ test:
 
 production:
   adapter: mysql
-  database: freefallhighscore_production
+  database: ffhs_production
   pool: 5
   timeout: 5000
+  username: ffhs
+  password: ffhs
