@@ -3,6 +3,7 @@ class HomeController < ApplicationController
 
   def index
     get_videos
+    render :text => "Hello, world!"
   end
 
   def moderate
