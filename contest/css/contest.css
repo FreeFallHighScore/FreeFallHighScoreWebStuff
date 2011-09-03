@@ -45,7 +45,10 @@ img {
 	border:none;
 }
 
-
+strong {
+	font-weight: bold;
+	color: #FFCC05;
+}
 
 body, html {
     
@@ -95,9 +98,18 @@ body, html {
 	margin:5px;
 }
 
+.red {
+	color: #ff0000;
+}
+
+#content #submithead{
+	float: right;
+}
+
+
 #navigation a {
 	background: rgb(255,204,5);
-	width: 180px;
+	width: 170px;
 	height: 15px;
 	padding:5px 0px;
 	margin: 3px 23px;
@@ -106,6 +118,8 @@ body, html {
 	font-weight:bold;
 	font-size:16px;
 	font-family: Helvetica, sans-serif;
+	text-align: left;
+	padding-left: 10px;
 }
 
 a:active, a:hover, a:focus, a:visited, a {
