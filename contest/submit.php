@@ -1,5 +1,7 @@
 <?php
 	if(isset($_POST['submitForm'])) {
+
+
 		if (!defined("PHP_EOL"))
     		define("PHP_EOL", "\r\n");
 		
@@ -16,7 +18,8 @@
 		// Person Info
 		$fname = $_POST['fname'];
 		$lname = $_POST['lname'];
-		$email = $_POST['email'];
+		$fullname = $fname." ".$lname;
+		$email = str_replace( "\r\n", '', $_POST['email'] );
 		$city = $_POST['city'];
 		// Preserver Info
 		$preservername = $_POST['preservername'];
@@ -49,34 +52,30 @@
 	        $description = stripslashes($description);
 	        $detaillink = stripslashes($detaillink);
 	    }
-	    
-	    $address = "freefallhighscore@googlegroups.com";
-	    
-	    $e_subject = 'PRESERVER CONTEST: '.$fname.' '.$lname;
-	    
+
 	    $e_body = "$fname $lname has submitted the folowing information for the FFHS Preserver Contest:".PHP_EOL.PHP_EOL;
 	    $e_content = "$fname $lname".PHP_EOL."$email".PHP_EOL."$city".PHP_EOL.PHP_EOL."Preserver Name:".PHP_EOL."$preservername".PHP_EOL.PHP_EOL."Description: ".PHP_EOL."$description".PHP_EOL.PHP_EOL."Image 1: ";
 	    $e_content2 = "$file1".PHP_EOL."Image 2: $file2".PHP_EOL."Image 3: $file3".PHP_EOL.PHP_EOL."More Details: $detaillink".PHP_EOL.PHP_EOL."Comments: ".PHP_EOL."\"$comments\"".PHP_EOL.PHP_EOL."Attendance: ".$attend.PHP_EOL.PHP_EOL;
 	    
-	    $msg = wordwrap($e_body.$e_content.$e_content2, 120);
-	    
-	    $headers .= "From: $email".PHP_EOL;
-	    $headers .= "Reply-To: $email".PHP_EOL;
-	    $headers .= "MIME-Version: 1.0".PHP_EOL;
-	    $headers .= "Content-type: text/plain; charset=utf-8".PHP_EOL;
-	    $headers .= "Content-Transfer-Encoding: quoted-printable".PHP_EOL;
-	    
-	    if (mail($address, $e_subject, $msg, $headers)) {
-	    
-	        // Email has sent successfully, echo a success page.
-	        
-	        echo "<div class='successbox'>Thank you for submitting your preserver, $fname. You will hear from us soon!</div>";
-	        exit(0);
-	    } else {
-	    
-	        echo 'ERROR!';
-	        exit(0);
-	    }
+	    $msg = wordwrap($e_body.$e_content.$e_content2, 300);
+		$safefiles = str_replace(' ','-',$fname);
+		$safefiles = $safefiles.'-'.str_replace(' ','-',$lname);
+		$safefiles = $safefiles.'-'.str_replace(' ','-',$preservername);
+
+		$entryFileName = $safefiles.'.txt';
+		$entryDir = 'entries/';
+		$fullFilePath = $entryDir.$entryFileName;
+		$entryFile = fopen($fullFilePath,'w') or die('can\'t open the file');
+		fwrite($entryFile, $msg);
+		fclose($entryFile);
+		
+		if(is_file($fullFilePath)) {
+	       		echo "<div class='successbox'>Thank you for submitting your preserver, $fname. You will hear from us soon!</div>";
+			exit(0);
+		} else {
+	    		echo '<div class="errormsgbox">Attention! There was an error while submitting the form, try again later.</div>';
+			exit(0);
+	    	}
 	}
 ?>
 <!DOCTYPE html>
