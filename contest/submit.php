@@ -231,6 +231,10 @@
 			<div id="content">
 				<form action="submit.php" enctype="multipart/form-data" id="contestForm" method="post">
 					<h2>Your Info</h2>
+					<p>
+						<strong>If you are not in New York City area you'll need to be able to ship the preserver to us by the time of the event</strong>
+					</p>
+					
 					<br clear="all">
 					<p>
 						<label class="inputlabel" for="fname">First Name: </label><input type="text" name="fname">
@@ -244,13 +248,15 @@
 					<p>
 						<label class="inputlabel" for="city">City: </label><input type="text" name="city">
 					</p>
-					<p>
-						<strong>if you are not in New York City area you'll need to be able to ship the preserver to us by the time of the event</strong>
-					</p>
 					<br clear="all">
 					<br clear="all">
 					<h2>Preserver Info</h2>
 					<br clear="all">
+					<p>
+						<strong>Remember this call is for documentation finished 
+						preservers only. Concepts and sketches are not accepted. It has got to look like it's ready to drop!</strong>
+					</p>
+
 					<p>
 						<label class="inputlabel">Preserver Name: </label><input type="text" name="preservername">
 					</p>
