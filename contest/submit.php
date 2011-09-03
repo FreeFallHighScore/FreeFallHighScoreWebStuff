@@ -81,7 +81,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Freefall Highscore Design Contest | Submit</title>
 		<link rel="stylesheet" href="css/contest.css" type="text/css" media="screen" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
 		<script src="js/scroll.js" type="text/javascript"></script>
@@ -212,12 +212,12 @@
 					</ul>
 				</div>
 				<div id="navigation">
-					<a href="#contest" class="navi">OVERVIEW</a>
-					<a href="#prizes" class="navi">PRIZES</a>
-					<a href="#judging" class="navi">JUDGING CRITERIA</a>
-					<a href="#constraints" class="navi">CONSTRAINTS</a>
-					<a href="#fineprint" class="navi">FINE PRINT</a>
-					</ul>
+					<a href="contest.html#contest" class="navi">OVERVIEW</a>
+					<a href="contest.html#prizes" class="navi">PRIZES</a>
+					<a href="contest.html#judging" class="navi">JUDGING CRITERIA</a>
+					<a href="contest.html#constraints" class="navi">CONSTRAINTS</a>
+					<a href="contest.html#fineprint" class="navi">FINE PRINT</a>
+					<a href="contest.html#contactus" class="navi">CONTACT US</a>
 				</div>
 				<!--
 				<div id="examples">
@@ -245,7 +245,7 @@
 						<label class="inputlabel" for="city">City: </label><input type="text" name="city">
 					</p>
 					<p>
-						<strong>if you are not in new york city area you'll need to be able to ship the preserver to us by the time of the event</strong>
+						<strong>if you are not in New York City area you'll need to be able to ship the preserver to us by the time of the event</strong>
 					</p>
 					<br clear="all">
 					<br clear="all">
@@ -261,7 +261,7 @@
 						<textarea cols="60" rows="10" name="description"></textarea>
 					</p>
 					<p>
-						upload up to three images of your preserver
+						Upload up to three images of your preserver.
 					</p>
 					<br clear="all">
 					<div id="file-uploader-1" class="uploadContainer"></div>
@@ -277,7 +277,7 @@
 						Paste in an optional youtube or vimeo link for more detail.
 					</p>
 					<p>
-						<input type="text" name="detaillink" style="width:300px;">
+						<input type="text" name="detaillink" style="width: 440px;">
 					</p>
 					<p>
 						Do you have any additional comments or stuff we should know?
@@ -287,7 +287,7 @@
 					</p>
 					<br/>
 					<p>
-						can you come to the event on October 13th?&nbsp;&nbsp;
+						Can you come to the event on October 13th?&nbsp;&nbsp;
 						<label for="attend_yes">Yes </label><input type="radio" id="attend_yes" name="attend" value="yes" />&nbsp;&nbsp;<label for="attend_no">No </label><input type="radio" id="attend_no" name="attend" value="no" />
 					</p>
 					<p>
@@ -306,7 +306,7 @@
 					<span>Overview</span>
 				</div>
 				<div id="sbBody">
-					<span class="sbTextHeader"> Brief in Brief </span>
+					<span class="sbTextHeader"> Keep in mind </span>
 					<ul class="bullet">
 						<li>Points for smarts, style, and creativity.</li>
 						<li>The Preserver cannot obstruct the camera from recording video</li>
