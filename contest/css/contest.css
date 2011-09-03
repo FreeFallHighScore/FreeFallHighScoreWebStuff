@@ -60,6 +60,11 @@ body, html {
     text-align: center;
 	background:url('../images/bk.png');
 }
+
+textarea{
+	width: 450px;
+}
+
 #wrapper {
 	width:1000px;
 	margin:0 auto;
@@ -267,6 +272,8 @@ a:active, a:hover, a:focus, a:visited, a {
 	display: block;
 	float: left;
 	padding: 4px 0px;
+	text-align: right;
+	margin-right: 5px;
 }
 
 #errorContainer {
