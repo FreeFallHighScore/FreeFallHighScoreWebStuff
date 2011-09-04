@@ -1,16 +1,11 @@
-<div class="container">
-  <div class="title">
-    <h1>High Score Leaderboard</h1>
-  </div>
-
-  <% if @videos.any? %>
-    <%= render 'pagination' %>
-    <% @videos.each do |v| %>
-      <%= render v %>
-    <% end %>
-    <%= render 'pagination' %>
-
-  <% else %>
-    <p>No videos to show at the moment. Please check back soon!</p>
+<% if @videos.any? %>
+  <%= render 'pagination' %>
+  <% @videos.each do |v| %>
+    <%= render v %>
   <% end %>
-</div>
+  <%= render 'pagination' %>
+
+<% else %>
+  <p>No videos to show at the moment. Please check back soon!</p>
+<% end %>
+

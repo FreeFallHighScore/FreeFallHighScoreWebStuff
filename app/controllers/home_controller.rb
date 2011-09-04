@@ -14,7 +14,10 @@ class HomeController < ApplicationController
   def about
   end
 
-  def lifevests
+  def preservers
+  end
+
+  def where
   end
 
   def disclaimer

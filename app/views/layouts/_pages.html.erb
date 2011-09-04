@@ -1,7 +1,5 @@
-<div class="buttonsContainer">
-  <a class="naviBtn disclaimer" href="/disclaimer">Disclaimer</a>
-  <a class="naviBtn about"      href="/about">About</a>
-  <a class="naviBtn lifevests"  href="/lifevests">Life Vests</a>
-  <a class="naviBtn index"      href="/">High Scores</a>
-  <div class="clear"></div>
-</div>
+<%= link_to "<span>Leaderboard</span>".html_safe, :root, :class => 'index' %>
+<%= link_to "<span class='long'>What's this about?</span>".html_safe,         :about, :class => 'about' %>
+<%= link_to "<span class='long'>Preservers &amp; Game Over</span>".html_safe, :preservers, :class => 'preservers' %>
+<%= link_to "<span class='long'>Where did they fall?</span>".html_safe,       :where, :class => 'where' %>
+

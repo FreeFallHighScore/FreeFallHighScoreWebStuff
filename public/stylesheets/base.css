@@ -1,3 +1,156 @@
 body {
   font-family: Helvetica, sans-serif;
+  margin: auto;
+  width: 960px;
+  background: url('/images/bk.png') repeat;
+}
+
+header {
+  float: left;
+  margin-left: 20px;
+  width: 200px;
+  text-align: center;
+  min-height: 580px;
+  background: transparent url("/images/arrow_with_stuff.png") no-repeat 18px 190px;
+  position: relative;
+  padding-top: 20px;
+}
+
+div#main {
+  float: left;
+  margin-left: 20px;
+  width: 450px;
+}
+
+footer {
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 220px;
+  padding-top: 20px;
+}
+
+img.logo {
+  width: 166px;
+  height: 164px;
+}
+
+div#content {
+  background-color: black;
+  color: white;
+  min-height: 500px;
+  padding: 20px;
+}
+
+div#navigation {
+  text-align: left;
+  position: absolute;
+  right: 20px;
+  top: 210px;
+}
+
+div#navigation a {
+  display: block;
+  text-transform: uppercase;
+  font-family: "UniversLightOblique", Helvetica, sans-serif;
+  color: black;
+  text-decoration: none;
+  width: 137px;
+  height: 35px;
+  background: url("/images/nav_button_up.png") no-repeat right;
+
+  font-size: 12px;
+}
+
+div#navigation a span {
+  display: inline-block;
+  margin-top: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div#navigation a span.long {
+  margin-top: 7px;
+}
+
+div#navigation a:hover {
+  background: url("/images/nav_button_hover.png") no-repeat right;
+}
+
+body.index      div#navigation a.index,
+body.about      div#navigation a.about,
+body.preservers div#navigation a.preservers,
+body.where      div#navigation a.where,
+div#navigation a:active {
+  background: url("/images/nav_button_down.png") no-repeat right;
+}
+
+div#social {
+  width: 62px;
+  height: 65px;
+  position: absolute;
+  right: 25px;
+  top: 360px;
+}
+
+div#social a {
+  float: left;
+}
+
+footer > div {
+  background-color: 30%;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+
+footer > div div.top {
+  width: 197px;
+  background: url("/images/sidebar_bluebox_top.png") no-repeat transparent;
+  height: 60px;
+  position: relative;
+}
+
+footer > div div.top h3 {
+  text-align: right;
+  font-family: "UniversLightOblique", Helvetica, sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  right: 20px;
+  top: 24px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+
+footer > div.news div.content h4 {
+  text-transform: uppercase;
+}
+
+footer > div div.content h4 {
+  background-color: white;
+  font-family: "UniversLightOblique", Helvetica, sans-serif;
+
+  margin-bottom: 10px;
+  margin-left: -10px;
+  padding: 2px 6px 1px 10px;
+}
+
+footer > div div.content {
+  background: url("/images/sidebar_bluebox_body.png") repeat-y transparent;
+  min-height: 25px;
+  padding: 10px 17px 20px 10px;
+  width: 170px;
+}
+
+footer > div div.content p {
+  font-size: 12px;
+  color: white;
+  font-family: 'UniversLightOblique';
+  line-height: 16px;
+}
+
+footer > div div.bottom {
+  width: 197px;
+  background: url("/images/sidebar_bluebox_bottom.png") no-repeat transparent;
+  height: 8px;
 }
