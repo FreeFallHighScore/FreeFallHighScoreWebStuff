@@ -2,6 +2,8 @@ set :application, "FreeFallHighScoreWebStuff"
 set :repository,  "git@github.com:FreeFallHighScore/FreeFallHighScoreWebStuff.git"
 set :user, "ubuntu"
 
+set :keep_releases, 3
+
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
