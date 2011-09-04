@@ -1,12 +1,12 @@
 FreeFallHighScoreWebStuff::Application.routes.draw do
-  match "auth/:provider/callback" => "sessions#create"
-  match "signout" => "sessions#destroy", :as => :signout
+  match "/staging/auth/:provider/callback" => "sessions#create"
+  match "/staging/signout" => "sessions#destroy", :as => :signout
 
-  get "preservers"  => "home#preservers"
-  get "where"       => "home#where"
-  get "about"       => "home#about"
-  get "disclaimer"  => "home#disclaimer"
-  get "moderate"    => "home#moderate"
+  get "/staging/preservers"  => "home#preservers"
+  get "/staging/where"       => "home#where"
+  get "/staging/about"       => "home#about"
+  get "/staging/disclaimer"  => "home#disclaimer"
+  get "/staging/moderate"    => "home#moderate"
 
   resources :videos, :only => [:index] do
     member do
