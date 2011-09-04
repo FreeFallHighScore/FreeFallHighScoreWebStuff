@@ -7,6 +7,9 @@ FreeFallHighScoreWebStuff::Application.routes.draw do
   get "/staging/about"       => "home#about", :as => :about
   get "/staging/disclaimer"  => "home#disclaimer", :as => :disclaimer
   get "/staging/moderate"    => "home#moderate", :as => :moderate
+  get "/staging/index"       => "home#index", :as => :index
+
+  get '/staging' => "home#index"
 
   resources :videos, :only => [:index] do
     member do
