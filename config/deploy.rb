@@ -25,3 +25,10 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
+
+namespace :logs do
+  task :watch do
+    stream("tail -f #{deploy_to}/shared/log/production.log")
+  end
+end
+
