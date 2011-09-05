@@ -46,4 +46,8 @@ FreeFallHighScoreWebStuff::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  # using a sub directory
+  config.action_controller.relative_url_root = '/staging'
+
 end
