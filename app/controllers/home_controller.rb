@@ -5,6 +5,11 @@ class HomeController < ApplicationController
     get_videos
   end
 
+  def show
+    @page = params[:permalink]
+    render @page
+  end
+
   def moderate
     @condition = ["disabled = ?", true]
     @per_page = 15
@@ -12,6 +17,7 @@ class HomeController < ApplicationController
   end
 
   def about
+    render :text => "BLAH"
   end
 
   def preservers

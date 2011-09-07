@@ -1,14 +1,5 @@
 FreeFallHighScoreWebStuff::Application.routes.draw do
   my_draw = Proc.new do
-    match "/auth/:provider/callback" => "sessions#create"
-    match "/signout" => "sessions#destroy", :as => :signout
-
-    get "/preservers"  => "home#preservers"
-    get "/where"       => "home#where"
-    get "/about"       => "home#about"
-    get "/disclaimer"  => "home#disclaimer"
-    get "/moderate"    => "home#moderate"
-
     resources :videos, :only => [:index] do
       member do
         put :enable
@@ -21,6 +12,11 @@ FreeFallHighScoreWebStuff::Application.routes.draw do
     end
 
     root :to => "home#index"
+
+    match "/auth/:provider/callback" => "sessions#create"
+    match "/signout" => "sessions#destroy", :as => :signout
+
+    match "/:permalink", :to => "home#show", :as => "home"
   end
 
   if ENV['RAILS_RELATIVE_URL_ROOT']

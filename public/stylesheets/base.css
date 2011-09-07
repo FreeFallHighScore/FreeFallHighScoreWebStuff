@@ -1,5 +1,5 @@
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: "UniversLightOblique", Helvetica, sans-serif;
   margin: auto;
   width: 960px;
   background: url('/images/bk.png') repeat;
@@ -45,52 +45,79 @@ div#content {
 div#navigation {
   text-align: left;
   position: absolute;
-  right: 20px;
+  right: 17px;
   top: 210px;
+}
+
+div.background_pages {
+  width: 131px;
+  position: absolute;
+  right: 17px;
+  top: 184px;
+  height: 300px;
+  background: #eeeeee;
+
+  opacity: 0.4;
+  filter:alpha(opacity=40)
+}
+
+a.link-to-app {
+  text-transform: uppercase;
+  background: #222;
+  width: 100px;
+  color: white;
+  display: inline;
+  top: 164px;
+  position: absolute;
+  line-height: 17px;
+  text-decoration: none;
+  text-align: left;
+  padding-left: 15px;
 }
 
 div#navigation a {
   display: block;
   text-transform: uppercase;
-  font-family: "UniversLightOblique", Helvetica, sans-serif;
   color: black;
   text-decoration: none;
-  width: 137px;
-  height: 35px;
-  background: url("/images/nav_button_up.png") no-repeat right;
+  width: 112px;
+  height: 16px;
+  background: #808080;
 
   font-size: 12px;
-}
 
-div#navigation a span {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #f6f6f6 black black #f6f6f6;
+
+  opacity: 0.7;
+  filter:alpha(opacity=70)
+
   display: inline-block;
-  margin-top: 14px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-div#navigation a span.long {
-  margin-top: 7px;
+  line-height: 16px;
+  padding-left: 15px;
 }
 
 div#navigation a:hover {
-  background: url("/images/nav_button_hover.png") no-repeat right;
+  background: red;
 }
 
-body.index      div#navigation a.index,
-body.about      div#navigation a.about,
-body.preservers div#navigation a.preservers,
-body.where      div#navigation a.where,
+body.about       div#navigation a.about,
+body.competition div#navigation a.competition,
+body.exhibition  div#navigation a.exhibition,
+body.index       div#navigation a.index,
+body.locations   div#navigation a.locations,
+body.preservers  div#navigation a.preservers,
 div#navigation a:active {
-  background: url("/images/nav_button_down.png") no-repeat right;
+  background: white;
 }
 
 div#social {
   width: 62px;
   height: 65px;
   position: absolute;
-  right: 25px;
-  top: 360px;
+  right: 10px;
+  top: 500px;
 }
 
 div#social a {
@@ -104,19 +131,18 @@ footer > div {
 }
 
 footer > div div.top {
-  width: 197px;
-  background: url("/images/sidebar_bluebox_top.png") no-repeat transparent;
-  height: 60px;
+  width: 203px;
+  background: url("/images/sbRight-header.png") no-repeat transparent;
+  height: 52px;
   position: relative;
 }
 
 footer > div div.top h3 {
   text-align: right;
-  font-family: "UniversLightOblique", Helvetica, sans-serif;
   text-transform: uppercase;
   position: absolute;
   right: 20px;
-  top: 24px;
+  top: 17px;
   font-size: 14px;
   display: inline-block;
 }
@@ -128,7 +154,6 @@ footer > div.news div.content h4 {
 
 footer > div div.content h4 {
   background-color: white;
-  font-family: "UniversLightOblique", Helvetica, sans-serif;
 
   margin-bottom: 10px;
   margin-left: -10px;
@@ -136,21 +161,22 @@ footer > div div.content h4 {
 }
 
 footer > div div.content {
-  background: url("/images/sidebar_bluebox_body.png") repeat-y transparent;
-  min-height: 25px;
+  background: url("/images/sbRight-body.png") repeat-y transparent;
+  min-height: 28px;
   padding: 10px 17px 20px 10px;
-  width: 170px;
+  width: 186px;
 }
 
 footer > div div.content p {
   font-size: 12px;
   color: white;
-  font-family: 'UniversLightOblique';
   line-height: 16px;
+  width: 180px;
 }
 
 footer > div div.bottom {
-  width: 197px;
-  background: url("/images/sidebar_bluebox_bottom.png") no-repeat transparent;
-  height: 8px;
+  width: 203px;
+  height: 31px;
+  background: url("/images/sbRight-footer.png") no-repeat transparent;
 }
+

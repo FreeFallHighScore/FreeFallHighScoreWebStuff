@@ -16,7 +16,7 @@
     <meta name="author" content="FreeFallHighScore, freefallhighscore@googlegroups.com">
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
-  <body class="<%= controller.controller_name %> <%= controller.action_name %>">
+  <body class="<%= controller.controller_name %> <%= controller.action_name %> <%= @page if @page %>">
     <header>
       <%= render "/layouts/header" %>
     </header>
