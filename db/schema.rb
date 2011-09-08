@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110908005903) do
+ActiveRecord::Schema.define(:version => 20110908012156) do
 
   create_table "users", :force => true do |t|
     t.string   "provider"
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(:version => 20110908005903) do
     t.string   "system"
     t.string   "version"
     t.boolean  "disabled",     :default => false
-    t.string   "account"
     t.integer  "rank"
   end
 
