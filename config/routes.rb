@@ -16,6 +16,8 @@ FreeFallHighScoreWebStuff::Application.routes.draw do
     match "/auth/:provider/callback" => "sessions#create"
     match "/signout" => "sessions#destroy", :as => :signout
 
+    resource :search, :only => [:show]
+
     match "/:permalink", :to => "home#show", :as => "home"
   end
 
