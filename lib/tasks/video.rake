@@ -1,5 +1,5 @@
 namespace :video do
-  desc "remova all video objects in db"
+  desc "remove all video objects in db"
   task :remove => :environment do |e|
     Video.all.each do |v|
       v.destroy
@@ -73,6 +73,15 @@ namespace :video do
           STDERR.puts "THERE WAS AN ERROR SAVING #{video.inspect}"
         end
       end
+    end
+
+    Rake::Task["video:rank"].execute
+  end
+
+  desc "Rank videos in the database"
+  task :rank => :environment do
+    Video.all.each_with_index do |video, i|
+      video.update_attributes :rank => i+1
     end
   end
 end

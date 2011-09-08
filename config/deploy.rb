@@ -21,14 +21,18 @@ role :db,  "ec2-184-73-117-129.compute-1.amazonaws.com", :primary => true # This
 
 set :use_sudo, false
 
-# if you're still using the script/reaper helper you will need
-# these http://github.com/rails/irs_process_scripts
-
-# If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
   task :start do ; end
   task :stop do ; end
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
+  desc "Temporary hack to kind of show correctly assets on the server."
+  task :templinks do
+    run "ln -s #{File.join(current_path, 'public')} #{File.join(current_path, 'public', 'staging_assets')}"
+    run "ln -s #{File.join(current_path, 'public')} #{File.join(current_path, 'public', 'staging')}"
+  end
 end
+
+after "deploy", "deploy:migrate"
+after 'deploy:symlink', "deploy:templinks"
