@@ -41,7 +41,7 @@ div#content {
   background: black;
 }
 
-.index div#content {
+.leaderboard div#content {
   background: transparent;
 }
 
@@ -109,7 +109,7 @@ div#navigation a:hover {
 body.about       div#navigation a.about,
 body.competition div#navigation a.competition,
 body.exhibition  div#navigation a.exhibition,
-body.index       div#navigation a.index,
+body.leaderboard div#navigation a.leaderboard,
 body.locations   div#navigation a.locations,
 body.preservers  div#navigation a.preservers,
 div#navigation a:active {

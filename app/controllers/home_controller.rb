@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   before_filter :validate, :only => [:moderate]
 
-  def index
+  def leaderboard
     get_videos
   end
 

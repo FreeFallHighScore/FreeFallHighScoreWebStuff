@@ -28,11 +28,6 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
   desc "Temporary hack to kind of show correctly assets on the server."
-  task :templinks do
-    run "ln -s #{File.join(current_path, 'public')} #{File.join(current_path, 'public', 'staging_assets')}"
-    run "ln -s #{File.join(current_path, 'public')} #{File.join(current_path, 'public', 'staging')}"
-  end
 end
 
 after "deploy", "deploy:migrate"
-after 'deploy:symlink', "deploy:templinks"
