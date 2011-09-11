@@ -1,33 +1,32 @@
 body {
+  background: url('/images/bk.png') repeat;
   font-family: "UniversLightOblique", Helvetica, sans-serif;
   margin: auto;
   width: 960px;
-  background: url('/images/bk.png') repeat;
 }
 
 header {
-  float: left;
   margin-left: 20px;
-  width: 200px;
-  text-align: center;
   min-height: 580px;
-  background: transparent url("/images/arrow_with_stuff.png") no-repeat 18px 190px;
-  position: relative;
   padding-top: 20px;
+  position: relative;
+  text-align: center;
+  width: 200px;
+  position: fixed;
 }
 
 div#main {
   float: left;
-  margin-left: 20px;
-  width: 450px;
+  margin-left: 220px;
+  width: 490px;
 }
 
 footer {
-  float: left;
-  margin-left: 20px;
   margin-right: 20px;
-  width: 220px;
   padding-top: 20px;
+  width: 190px;
+  position: fixed;
+  margin-left: 730px;
 }
 
 img.logo {
@@ -36,10 +35,14 @@ img.logo {
 }
 
 div#content {
-  background-color: black;
   color: white;
   min-height: 500px;
   padding: 20px;
+  background: black;
+}
+
+.index div#content {
+  background: transparent;
 }
 
 div#navigation {
@@ -54,7 +57,7 @@ div.background_pages {
   position: absolute;
   right: 17px;
   top: 184px;
-  height: 300px;
+  height: 225px;
   background: #eeeeee;
 
   opacity: 0.4;
@@ -91,15 +94,16 @@ div#navigation a {
   border-color: #f6f6f6 black black #f6f6f6;
 
   opacity: 0.7;
-  filter:alpha(opacity=70)
+  filter: alpha(opacity=70);
 
-  display: inline-block;
   line-height: 16px;
   padding-left: 15px;
 }
 
 div#navigation a:hover {
-  background: red;
+  background: #f16722;
+  opacity: 1.0;
+  filter: alpha(opacity=100);
 }
 
 body.about       div#navigation a.about,
@@ -112,7 +116,7 @@ div#navigation a:active {
   background: white;
 }
 
-div#social {
+div#social-icons {
   width: 62px;
   height: 65px;
   position: absolute;
@@ -120,13 +124,24 @@ div#social {
   top: 500px;
 }
 
-div#social a {
+div#social-icons a {
   float: left;
+}
+
+div#social-actions {
+  width: 62px;
+  height: 65px;
+  position: absolute;
+  left: 52px;
+  top: 440px;
+}
+
+div#social-actions a#user {
+  color: white;
 }
 
 footer > div {
   background-color: 30%;
-  min-height: 100px;
   margin-bottom: 20px;
 }
 
@@ -158,12 +173,14 @@ footer > div div.content h4 {
   margin-bottom: 10px;
   margin-left: -10px;
   padding: 2px 6px 1px 10px;
+
+  display: inline-block;
+  padding-right: 15px;
 }
 
 footer > div div.content {
   background: url("/images/sbRight-body.png") repeat-y transparent;
-  min-height: 28px;
-  padding: 10px 17px 20px 10px;
+  padding: 10px 17px 1px 10px;
   width: 186px;
 }
 
@@ -172,6 +189,7 @@ footer > div div.content p {
   color: white;
   line-height: 16px;
   width: 180px;
+  margin-bottom: 12px;
 }
 
 footer > div div.bottom {
@@ -185,4 +203,71 @@ div#content h1 {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
+}
+
+div.title {
+  position: relative;
+  background: black;
+  padding: 15px;
+}
+
+div#search {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+}
+
+/*********************************
+ * Video
+ *********************************/
+div.video {
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: black;
+}
+
+div.video .player {
+}
+
+.video .stats {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.video .stats > div {
+  float: left;
+  height: 16px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.video .stats .time-pos {
+  background: #808080;
+  margin-right: 5px;
+  width: 225px;
+}
+
+.video .stats .location {
+  background: white;
+  width: 180px;
+  font-size: 0.9em;
+}
+
+.video .stats .time-pos.winner {
+  background: #fdc500;
+}
+
+.video .stats .who-when-where {
+  color: white;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+div.video .author {
+  color: #e75405;
+}
+
+p.title {
+  text-transform: uppercase;
 }

@@ -7,10 +7,6 @@
     <p>Lorem ipsum</p>
     <p>Vinyl retro brunch, helvetica beard vice quinoa scenester wes anderson
     DIY iphone mustache next level keytar. Austin homo marfa PBR. Trust fund
-    cred messenger bag lomo tofu, brooklyn food truck. Sartorial +1 messenger
-    bag artisan wayfarers. Keytar messenger bag before they sold out retro
-    master cleanse. Messenger bag portland shoreditch freegan blog mlkshk,
-    lo-fi quinoa salvia. Letterpress vegan marfa skateboard sartorial homo,
     irony artisan blog seitan shoreditch readymade.</p>
   </div>
   <div class="bottom"></div>
@@ -19,9 +15,16 @@
   <div class="top">
     <h3>Tweets</h3>
   </div>
-  <div class="content">
-    <h4>@juancmuller</h4>
-    <p>Hello, world!</p>
+  <div class="content tweet">
+    <%= cache "Tweet" do %>
+      <%
+        tweets = Twitter::Search.new.q("freefallhighscore").fetch
+        tweets.first(3).each do |tweet|
+      %>
+        <%= render '/layouts/tweet', :tweet => tweet %>
+      <% end %>
+      <p><a href="http://j">
+    <% end %>
   </div>
   <div class="bottom"></div>
 </div>

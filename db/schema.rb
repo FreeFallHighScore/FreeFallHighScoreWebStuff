@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110908012156) do
+ActiveRecord::Schema.define(:version => 20110911053603) do
 
   create_table "users", :force => true do |t|
     t.string   "provider"
@@ -38,6 +38,9 @@ ActiveRecord::Schema.define(:version => 20110908012156) do
     t.string   "version"
     t.boolean  "disabled",     :default => false
     t.integer  "rank"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
   end
 
   add_index "videos", ["author"], :name => "index_videos_on_author"

@@ -1,4 +1,7 @@
 .pagination {
+  display: none;
+}
+.pagination {
   cursor: default;
   margin: auto;
 width: 100%;

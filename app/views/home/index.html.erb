@@ -1,9 +1,11 @@
-<h1>Highscores</h1>
-<%= form_tag search_path, :id => "search-bar-form", :class => "clearfix", :method => :get do %>
-  <div id="search">
-    <%= text_field_tag :query, "", :id => "video-query", :title => "Search", :value => @query %>
-  </div>
-<% end %>
+<div class="title">
+  <h1>Highscores</h1>
+  <%= form_tag search_path, :id => "search-bar-form", :class => "clearfix", :method => :get do %>
+    <div id="search">
+      <%= text_field_tag :query, "", :id => "video-query", :title => "Search", :value => @query, :placeholder => 'SEARCH BY USER' %>
+    </div>
+  <% end %>
+</div>
 
 <% if @videos.any? %>
   <div class="videos">
