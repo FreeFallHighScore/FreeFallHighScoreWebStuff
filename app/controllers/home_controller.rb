@@ -33,6 +33,10 @@ class HomeController < ApplicationController
     render :text => 'google-site-verification: google34c78ecc55cce2c5.html'
   end
 
+  def google2bcb2e13fbb549a1
+    render 'google2bcb2e13fbb549a1', :layout => nil
+  end
+
   private
 
   def get_videos
