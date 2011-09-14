@@ -14,6 +14,7 @@ FreeFallHighScoreWebStuff::Application.routes.draw do
     root :to => "home#leaderboard"
 
     match '/leaderboard' => "home#leaderboard"
+    match '/google34c78ecc55cce2c5' => 'home#google34c78ecc55cce2c5'
 
     match "/auth/:provider/callback" => "sessions#create"
     match "/signout" => "sessions#destroy", :as => :signout
