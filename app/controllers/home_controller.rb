@@ -29,6 +29,10 @@ class HomeController < ApplicationController
   def disclaimer
   end
 
+  def google34c78ecc55cce2c5
+    render :text => 'google-site-verification: google34c78ecc55cce2c5.html'
+  end
+
   private
 
   def get_videos
