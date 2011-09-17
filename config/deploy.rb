@@ -5,7 +5,7 @@ set :user, "ubuntu"
 set :keep_releases, 3
 
 set :scm, :git
-set :branch, :boilerplate
+set :branch, :master
 set :deploy_via, :remote_cache
 ssh_options[:forward_agent] = true
 #set :git_enable_submodules, 1
