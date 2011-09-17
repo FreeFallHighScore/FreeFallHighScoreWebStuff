@@ -133,7 +133,7 @@ div#social-actions {
   width: 62px;
   height: 65px;
   margin: 10px;
-  margin-top: 30px;
+  margin-top: 13px;
 }
 
 div#social-actions a#user {
@@ -271,4 +271,9 @@ div.video .author {
 
 p.title {
   text-transform: uppercase;
+}
+
+div.content.tweet div.twitter-follow {
+  margin-top: 0;
+  margin-bottom: 15px;
 }

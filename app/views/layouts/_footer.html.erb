@@ -6,7 +6,7 @@
     <h4>Join Our Contest</h4>
     <h4>Design a Preserver!</h4>
     <p>Win an iPod touch and VIP tickets to The Creators Project NYC event. Design an amazing and stylish ways of protecting falling phones.</p>
-    <p>Click through to the CONTEST page for more details.</p>
+    <p>Click through to the <a href="http://contest.freefallhighscore.com/">CONTEST</a> page for more details.</p>
   </div>
   <div class="bottom"></div>
 </div>
@@ -15,6 +15,11 @@
     <h3>Tweets</h3>
   </div>
   <div class="content tweet">
+    <div class="twitter-follow">
+      <a href="http://twitter.com/freefallhiscore" class="twitter-follow-button" data-show-count="false">Follow @freefallhiscore</a>
+      <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+    </div>
+
     <%= cache "Tweet" do %>
       <%
         tweets = Twitter::Search.new.q("freefallhighscore").fetch
