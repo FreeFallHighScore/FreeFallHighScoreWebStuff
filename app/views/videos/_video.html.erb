@@ -1,8 +1,25 @@
 <div class="video" id="<%= dom_id video %>">
-  <iframe width="480" height="390" src="http://www.youtube.com/embed/<%= video.youtube_id %>" frameborder="0" allowfullscreen></iframe>
-  <p>
-    By: <%= video.author %> &mdash; <%= video.drop_time %>ms (<%= video.latitude %>, <%= video.longitude %>), on <%= video.published_at.strftime("%D") %>
-  </p>
+  <iframe class="player" width="410" height="330" src="http://www.youtube.com/embed/<%= video.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+  <div class="stats clearfix">
+    <div class="time-pos<%= " winner" if video.rank < 4 %>">
+      <%= video.drop_time / 1000.0 %>s
+      <% if video.rank < 4 %>
+        <%= rank_in_words video.rank %>
+      <% end %>
+    </div>
+    <div class="location">
+      <% if video.city %>
+        <%= video.city %>,
+        <%= video.state %>,
+        <%= video.country %>
+      <% end %>
+    </div>
+    <div class="who-when-where">
+      Uploaded by <span class="author"><%= video.author %></span> on <%= video.published_at.strftime("%b %d, %Y") %>
+    </div>
+  </div>
+  <p class="title"><%= video.title %></p>
+  <p><%= video.description %></p>
   <% if current_user and current_user.admin? %>
     <div class="disable">
       <%= form_for video, :url => disable_video_path(video) do |f| %>

@@ -1,8 +1,13 @@
 class HomeController < ApplicationController
   before_filter :validate, :only => [:moderate]
 
-  def index
+  def leaderboard
     get_videos
+  end
+
+  def show
+    @page = params[:permalink]
+    render @page
   end
 
   def moderate
@@ -12,12 +17,24 @@ class HomeController < ApplicationController
   end
 
   def about
+    render :text => "BLAH"
   end
 
-  def lifevests
+  def preservers
+  end
+
+  def where
   end
 
   def disclaimer
+  end
+
+  def google34c78ecc55cce2c5
+    render :text => 'google-site-verification: google34c78ecc55cce2c5.html'
+  end
+
+  def google2bcb2e13fbb549a1
+    render 'google2bcb2e13fbb549a1', :layout => nil
   end
 
   private

@@ -11,7 +11,7 @@ module FreeFallHighScoreWebStuff
   class Application < Rails::Application
     # Added by the Rails 3 jQuery Template
     # http://github.com/lleger/Rails-3-jQuery, written by Logan Leger
-    config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
+    config.action_view.javascript_expansions[:defaults] = %w(jquery rails modernizr jquery.infinitescroll.min.js)
     config.action_view.javascript_expansions[:cdn] = %w(https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js rails)
 
     # Settings in config/environments/* take precedence over those specified here.

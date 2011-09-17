@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'UniversLightOblique';
+    src: url('/fonts/univers_45_light_oblique-webfont.eot');
+    src: url('/fonts/univers_45_light_oblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/univers_45_light_oblique-webfont.woff') format('woff'),
+         url('/fonts/univers_45_light_oblique-webfont.ttf') format('truetype'),
+         url('/fonts/univers_45_light_oblique-webfont.svg#UniversLightOblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UniversMedium';
+    src: url('/fonts/univers_55-webfont.eot');
+    src: url('/fonts/univers_55-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/univers_55-webfont.woff') format('woff'),
+         url('/fonts/univers_55-webfont.ttf') format('truetype'),
+         url('/fonts/univers_55-webfont.svg#UniversMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

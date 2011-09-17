@@ -1,0 +1,30 @@
+<div class="news">
+  <div class="top">
+    <h3>News</h3>
+  </div>
+  <div class="content">
+    <h4>Test drop this weekend</h4>
+    <p>Lorem ipsum</p>
+    <p>Vinyl retro brunch, helvetica beard vice quinoa scenester wes anderson
+    DIY iphone mustache next level keytar. Austin homo marfa PBR. Trust fund
+    irony artisan blog seitan shoreditch readymade.</p>
+  </div>
+  <div class="bottom"></div>
+</div>
+<div class="tweets">
+  <div class="top">
+    <h3>Tweets</h3>
+  </div>
+  <div class="content tweet">
+    <%= cache "Tweet" do %>
+      <%
+        tweets = Twitter::Search.new.q("freefallhighscore").fetch
+        tweets.first(3).each do |tweet|
+      %>
+        <%= render '/layouts/tweet', :tweet => tweet %>
+      <% end %>
+      <p><a href="http://j">
+    <% end %>
+  </div>
+  <div class="bottom"></div>
+</div>

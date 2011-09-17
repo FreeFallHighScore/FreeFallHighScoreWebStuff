@@ -6,4 +6,5 @@ gem 'mysql'
 gem 'thin'
 gem 'omniauth'
 gem 'will_paginate'
-
+gem 'geokit'
+gem 'twitter'

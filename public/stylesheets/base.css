@@ -1,3 +1,274 @@
 body {
-  font-family: Helvetica, sans-serif;
+  background: url('/images/bk.png') repeat;
+  font-family: "UniversLightOblique", Helvetica, sans-serif;
+  margin: auto;
+  width: 960px;
+}
+
+header {
+  margin-left: 20px;
+  min-height: 580px;
+  padding-top: 20px;
+  position: relative;
+  text-align: center;
+  width: 200px;
+  position: fixed;
+}
+
+div#main {
+  float: left;
+  margin-left: 220px;
+  width: 490px;
+}
+
+footer {
+  margin-right: 20px;
+  padding-top: 20px;
+  width: 190px;
+  position: fixed;
+  margin-left: 730px;
+}
+
+img.logo {
+  width: 166px;
+  height: 164px;
+}
+
+div#content {
+  color: white;
+  min-height: 500px;
+  padding: 20px;
+  background: black;
+}
+
+.leaderboard div#content {
+  background: transparent;
+}
+
+div#navigation {
+  text-align: left;
+  position: absolute;
+  right: 17px;
+  top: 210px;
+}
+
+div.background_pages {
+  width: 131px;
+  position: absolute;
+  right: 17px;
+  top: 184px;
+  height: 225px;
+  background: #eeeeee;
+
+  opacity: 0.4;
+  filter:alpha(opacity=40)
+}
+
+a.link-to-app {
+  text-transform: uppercase;
+  background: #222;
+  width: 100px;
+  color: white;
+  display: inline;
+  top: 164px;
+  position: absolute;
+  line-height: 17px;
+  text-decoration: none;
+  text-align: left;
+  padding-left: 15px;
+}
+
+div#navigation a {
+  display: block;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  width: 112px;
+  height: 16px;
+  background: #808080;
+
+  font-size: 12px;
+
+  border-style: solid;
+  border-width: 2px;
+  border-color: #f6f6f6 black black #f6f6f6;
+
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+
+  line-height: 16px;
+  padding-left: 15px;
+}
+
+div#navigation a:hover {
+  background: #f16722;
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+
+body.about       div#navigation a.about,
+body.competition div#navigation a.competition,
+body.exhibition  div#navigation a.exhibition,
+body.leaderboard div#navigation a.leaderboard,
+body.locations   div#navigation a.locations,
+body.preservers  div#navigation a.preservers,
+div#navigation a:active {
+  background: white;
+}
+
+div#social-icons {
+  width: 62px;
+  height: 65px;
+  position: absolute;
+  right: 10px;
+  top: 500px;
+}
+
+div#social-icons a {
+  float: left;
+}
+
+div#social-actions {
+  width: 62px;
+  height: 65px;
+  position: absolute;
+  left: 52px;
+  top: 440px;
+}
+
+div#social-actions a#user {
+  color: white;
+}
+
+footer > div {
+  background-color: 30%;
+  margin-bottom: 20px;
+}
+
+footer > div div.top {
+  width: 203px;
+  background: url("/images/sbRight-header.png") no-repeat transparent;
+  height: 52px;
+  position: relative;
+}
+
+footer > div div.top h3 {
+  text-align: right;
+  text-transform: uppercase;
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+
+footer > div.news div.content h4 {
+  text-transform: uppercase;
+}
+
+footer > div div.content h4 {
+  background-color: white;
+
+  margin-bottom: 10px;
+  margin-left: -10px;
+  padding: 2px 6px 1px 10px;
+
+  display: inline-block;
+  padding-right: 15px;
+}
+
+footer > div div.content {
+  background: url("/images/sbRight-body.png") repeat-y transparent;
+  padding: 10px 17px 1px 10px;
+  width: 186px;
+}
+
+footer > div div.content p {
+  font-size: 12px;
+  color: white;
+  line-height: 16px;
+  width: 180px;
+  margin-bottom: 12px;
+}
+
+footer > div div.bottom {
+  width: 203px;
+  height: 31px;
+  background: url("/images/sbRight-footer.png") no-repeat transparent;
+}
+
+div#content h1 {
+  color: #e75405;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+div.title {
+  position: relative;
+  background: black;
+  padding: 15px;
+}
+
+div#search {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+}
+
+/*********************************
+ * Video
+ *********************************/
+div.video {
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: black;
+}
+
+div.video .player {
+}
+
+.video .stats {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.video .stats > div {
+  float: left;
+  height: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+
+.video .stats .time-pos {
+  background: #808080;
+  width: 220px;
+}
+
+.video .stats .location {
+  background: white;
+  width: 170px;
+  font-size: 0.9em;
+}
+
+.video .stats .time-pos.winner {
+  background: #fdc500;
+}
+
+.video .stats .who-when-where {
+  color: white;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+div.video .author {
+  color: #e75405;
+}
+
+p.title {
+  text-transform: uppercase;
 }

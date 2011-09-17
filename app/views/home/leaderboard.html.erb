@@ -1,0 +1,20 @@
+<div class="title">
+  <h1>Highscores</h1>
+  <%= form_tag search_path, :id => "search-bar-form", :class => "clearfix", :method => :get do %>
+    <div id="search">
+      <%= text_field_tag :query, "", :id => "video-query", :title => "Search", :value => @query, :placeholder => 'SEARCH BY USER' %>
+    </div>
+  <% end %>
+</div>
+
+<% if @videos.any? %>
+  <div class="videos">
+    <% @videos.each do |v| %>
+      <%= render v %>
+    <% end %>
+    <%= render '/home/pagination' %>
+  </div>
+<% else %>
+  <p>No videos to show at the moment. Please check back soon!</p>
+<% end %>
+

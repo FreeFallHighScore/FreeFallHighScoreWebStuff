@@ -1,0 +1,43 @@
+<div id="map_canvas"></div>
+
+<%= content_for :javascript do %>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript">
+    $(function() {
+      var australia = new google.maps.LatLng(-25, 133);
+
+      map = new google.maps.Map(document.getElementById('map_canvas'), {
+        center: australia,
+        zoom: 4,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+
+      layer = new google.maps.FusionTablesLayer({
+        query: {
+          select: 'geometry',
+          from: '815230'
+        },
+        styles: [{
+          polygonOptions: {
+            fillColor: "#00FF00",
+            fillOpacity: 0.3
+          }
+        }, {
+          where: "birds > 300",
+          polygonOptions: {
+            fillColor: "#0000FF"
+          }
+        }, {
+          where: "population > 5",
+          polygonOptions: {
+            fillOpacity: 1.0
+          }
+        }]
+      });
+      layer.setMap(map);
+
+
+    });
+  </script>
+<% end %>
+
