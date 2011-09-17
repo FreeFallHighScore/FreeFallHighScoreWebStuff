@@ -23,7 +23,7 @@ div#main {
 
 footer {
   margin-right: 20px;
-  padding-top: 17px;
+  padding-top: 50px;
   width: 190px;
   position: fixed;
   margin-left: 730px;
@@ -38,6 +38,7 @@ div#content {
   color: white;
   min-height: 500px;
   padding: 20px;
+  padding-top: 54px;
   background: black;
 }
 
