@@ -58,10 +58,7 @@ div.background_pages {
   right: 17px;
   top: 184px;
   height: 225px;
-  background: #eeeeee;
-
-  opacity: 0.4;
-  filter:alpha(opacity=40)
+  background-image: url("/images/eee_40.png");
 }
 
 a.link-to-app {
@@ -131,9 +128,10 @@ div#social-icons a {
 
 div#social-actions {
   width: 62px;
-  height: 65px;
   margin: 10px;
   margin-top: 13px;
+  bottom:0;
+  position: absolute;
 }
 
 div#social-actions a#user {
