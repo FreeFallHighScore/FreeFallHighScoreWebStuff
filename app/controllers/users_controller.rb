@@ -15,7 +15,7 @@ class UsersController < ApplicationController
         @per_page ||= 2
         @query = session[:query]
         @videos = @videos.paginate(:page => params[:page], :per_page => @per_page)
-        render '/home/index'
+        render '/home/leaderboard'
       }
     end
   end
