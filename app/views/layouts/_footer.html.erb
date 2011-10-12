@@ -22,12 +22,14 @@
 
     <%= cache "Tweet" do %>
       <%
-        tweets = Twitter::Search.new.q("freefallhighscore").fetch
-        tweets.first(3).each do |tweet|
-      %>
-        <%= render '/layouts/tweet', :tweet => tweet %>
+        begin
+          tweets = Twitter::Search.new.q("freefallhighscore").fetch
+          tweets.first(3).each do |tweet|
+        %>
+            <%= render '/layouts/tweet', :tweet => tweet %>
+        <% end %>
+      <% rescue %>
       <% end %>
-      <p><a href="http://j">
     <% end %>
   </div>
   <div class="bottom"></div>
