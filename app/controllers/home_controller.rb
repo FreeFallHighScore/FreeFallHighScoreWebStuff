@@ -11,9 +11,8 @@ class HomeController < ApplicationController
   end
 
   def moderate
-    @condition = ["disabled = ?", true]
     @per_page = 15
-    get_videos
+    get_videos(:show_disabled => true)
   end
 
   def about
@@ -39,10 +38,20 @@ class HomeController < ApplicationController
 
   private
 
-  def get_videos
+  def get_videos(attrs = {})
     @per_page ||= 5
-    @condition ||= ["disabled = ?", false]
-    @videos = Video.where(@condition).all.paginate(:page => params[:page], :per_page => @per_page)
+
+    @videos = Video
+    @videos = @videos.enabled unless attrs[:show_disabled]
+
+    case params['sort_by']
+    when 'recent'
+      @videos = @videos.recent
+    else
+      @videos = @videos.drop_time
+    end
+
+    @videos = @videos.all.paginate(:page => params[:page], :per_page => @per_page)
   end
 
   def validate

@@ -4,7 +4,9 @@
     <div class="time-pos<%= " winner" if video.rank < 4 %>">
       <%= video.drop_time / 1000.0 %>s
       <% if video.rank < 4 %>
-        <%= (rank_in_words video.rank).upcase %>
+        <span class="winner">
+          <%= (rank_in_words video.rank).upcase %>
+        </span>
       <% end %>
     </div>
     <div class="location">

@@ -1,5 +1,8 @@
 class Video < ActiveRecord::Base
-  default_scope :order => 'drop_time DESC'
+  scope :drop_time, :order      => 'drop_time  DESC'
+  scope :recent,    :order      => 'published_at DESC'
+  scope :enabled,   :conditions => 'disabled = false'
+
   after_save :reverse_geocode
 
   private
