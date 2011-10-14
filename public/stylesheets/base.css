@@ -33,7 +33,8 @@ h1 {
   display: none;
 }
 
-.leaderboard h1 {
+.leaderboard h1,
+.users.videos h1 {
   display: block;
 }
 
@@ -52,7 +53,8 @@ div#content {
   background: black;
 }
 
-.leaderboard div#content {
+.leaderboard div#content,
+.users.videos div#content {
   background: transparent;
 }
 

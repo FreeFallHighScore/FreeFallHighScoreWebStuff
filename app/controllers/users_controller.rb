@@ -23,6 +23,14 @@ class UsersController < ApplicationController
   private
 
   def get_videos
-    @videos = Video.enabled.drop_time.where("author = ?", params[:user_id])
+    @videos = Video.enabled.where("author = ?", params[:user_id])
+
+    case params['sort_by']
+    when 'recent'
+      @videos = @videos.recent
+      @recent = true
+    else
+      @videos = @videos.drop_time
+    end
   end
 end
