@@ -274,12 +274,13 @@ div.video .player {
 .video .stats .time-pos {
   background: #808080;
   width: 180px;
+  margin-left: 2px;
 }
 
 .video .stats .location {
   font-family: 'Univers';
   background: white;
-  width: 210px;
+  width: 211px;
   font-size: 0.7em;
 }
 
