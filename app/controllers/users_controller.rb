@@ -23,6 +23,6 @@ class UsersController < ApplicationController
   private
 
   def get_videos
-    @videos = Video.where("author = ? and disabled = ?", params[:user_id], false)
+    @videos = Video.enabled.drop_time.where("author = ?", params[:user_id])
   end
 end

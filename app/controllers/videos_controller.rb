@@ -3,7 +3,7 @@ class VideosController < ApplicationController
 
   def index
     respond_to do |f|
-      f.json { render :json => Video.where("disabled = ?", false).map{ |v|
+      f.json { render :json => Video.enabled.drop_time.map{ |v|
         v.attributes.merge({
           "video_url" => "http://www.youtube.com/watch?v=#{v.youtube_id}",
           "thumbnail_url" => "http://i.ytimg.com/vi/#{v.youtube_id}/default.jpg"
