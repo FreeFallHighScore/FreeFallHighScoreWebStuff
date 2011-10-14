@@ -28,21 +28,17 @@ class HomeController < ApplicationController
   def disclaimer
   end
 
-  def google34c78ecc55cce2c5
-    render :text => 'google-site-verification: google34c78ecc55cce2c5.html'
-  end
-
-  def google2bcb2e13fbb549a1
-    render 'google2bcb2e13fbb549a1', :layout => nil
-  end
-
   private
 
   def get_videos(attrs = {})
     @per_page ||= 5
 
     @videos = Video
-    @videos = @videos.enabled unless attrs[:show_disabled]
+    if attrs[:show_disabled]
+      @videos = @videos.disabled
+    else
+      @videos = @videos.enabled
+    end
 
     case params['sort_by']
     when 'recent'

@@ -75,13 +75,6 @@ namespace :video do
       end
     end
 
-    Rake::Task["video:rank"].execute
-  end
-
-  desc "Rank videos in the database"
-  task :rank => :environment do
-    Video.all.each_with_index do |video, i|
-      video.update_attributes :rank => i+1
-    end
+    Video.rank
   end
 end

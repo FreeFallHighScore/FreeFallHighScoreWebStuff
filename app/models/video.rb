@@ -2,8 +2,15 @@ class Video < ActiveRecord::Base
   scope :drop_time, :order      => 'drop_time  DESC'
   scope :recent,    :order      => 'published_at DESC'
   scope :enabled,   :conditions => 'disabled = false'
+  scope :disabled,  :conditions => 'disabled = true'
 
   after_save :reverse_geocode
+
+  def self.rank
+    Video.enabled.drop_time.each_with_index do |video, i|
+      video.update_attributes :rank => i+1
+    end
+  end
 
   private
 

@@ -17,13 +17,17 @@ class VideosController < ApplicationController
       flash[:alert] = "Error updating video"
     end
 
-    redirect_to :root
+    Video.rank
+
+    redirect_to :leaderboard
   end
 
   def enable
     unless @video.update_attributes(:disabled => false)
       flash[:alert] = "Error updating video"
     end
+
+    Video.rank
 
     redirect_to :moderate
   end
