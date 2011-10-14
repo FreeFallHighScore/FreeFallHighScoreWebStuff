@@ -3,11 +3,10 @@
 
 $(function() {
   $('#content').infinitescroll({
-    // selector for the paged navigation (it will be hidden)
     navSelector  : "div.pagination",
-    // selector for the NEXT link (to page 2)
     nextSelector : "a.next_page",
-    // selector for all items you'll retrieve
-    itemSelector : "#content div.video"
+    itemSelector : "#content div.video",
+    loadingText  : "Loading new videos...",
+    donetext     : "We've loaded all the videos..."
   });
 });
