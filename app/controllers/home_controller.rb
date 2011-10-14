@@ -43,6 +43,7 @@ class HomeController < ApplicationController
     case params['sort_by']
     when 'recent'
       @videos = @videos.recent
+      @recent = true
     else
       @videos = @videos.drop_time
     end

@@ -7,6 +7,10 @@
         <span class="winner">
           <%= (rank_in_words video.rank).upcase %>
         </span>
+      <% else %>
+        <span>
+          #<%= video.rank %>
+        </span>
       <% end %>
     </div>
     <div class="location">

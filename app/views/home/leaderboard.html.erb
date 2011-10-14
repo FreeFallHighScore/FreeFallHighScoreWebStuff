@@ -2,7 +2,11 @@
   <h1>
     <a href="?sort_by=recent"><img src="/images/time.png"></a>
     <a href="?sort_by=foo"><img src="/images/score.png"></a>
-    Highscores
+    <% if @recent %>
+      Recent
+    <% else %>
+      Highscores
+    <% end %>
   </h1>
   <%= form_tag search_path, :id => "search-bar-form", :class => "clearfix", :method => :get do %>
     <div id="search">
