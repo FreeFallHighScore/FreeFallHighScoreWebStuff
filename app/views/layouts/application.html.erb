@@ -29,8 +29,9 @@
 
     <footer>
       <% if current_user and current_user.admin? %>
-        <div style="position: absolute; right: 0; top: 50px; background-color: white;">
-          <%= link_to "Moderate", moderate_path %>
+        <div class="admin">
+          <%= link_to "Moderate", moderate_path %><br/>
+          <%= link_to "Sign Out", signout_path %>
         </div>
       <% end %>
       <%= render '/layouts/footer' %>

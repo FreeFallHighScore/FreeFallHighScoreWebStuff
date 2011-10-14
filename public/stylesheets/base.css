@@ -331,3 +331,9 @@ div.clear { clear: both; }
   width: 50%;
 }
 
+div.admin {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: white;
+}
