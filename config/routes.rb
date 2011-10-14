@@ -11,7 +11,7 @@ FreeFallHighScoreWebStuff::Application.routes.draw do
       get :videos
     end
 
-    #root :to => "home#leaderboard"
+    root :to => "home#leaderboard"
 
     match '/leaderboard' => "home#leaderboard"
     match '/moderate' => "home#moderate"
