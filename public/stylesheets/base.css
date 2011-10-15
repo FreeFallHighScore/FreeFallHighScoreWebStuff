@@ -59,19 +59,17 @@ div#content {
 }
 
 div#navigation {
-  text-align: left;
-  position: absolute;
-  right: 17px;
-  top: 240px;
+  float: left;
+  margin-top: 30px;
 }
 
 div.background_pages {
+  position: relative;
+  right: -30px;
+  top: 179px;
+  height: 390px;
+  background-image: url("/images/eee_60.png");
   width: 153px;
-  position: absolute;
-  right: 17px;
-  top: 198px;
-  height: 225px;
-  background-image: url("/images/eee_40.png");
 }
 
 a.link-to-app {
@@ -105,6 +103,7 @@ div#navigation a {
 
   line-height: 19px;
   padding-left: 15px;
+  text-align: left;
 }
 
 div#navigation a:focus,
@@ -125,11 +124,9 @@ div#navigation a:active {
 }
 
 div#social-icons {
-  width: 62px;
+  width: 132px;
   height: 65px;
-  position: absolute;
-  right: 10px;
-  top: 500px;
+  float: left;
 }
 
 div#social-icons a {
@@ -137,15 +134,63 @@ div#social-icons a {
 }
 
 div#social-actions {
-  width: 62px;
+  width: 132px;
   margin: 10px;
   margin-top: 13px;
-  bottom:0;
-  position: absolute;
+  float: left;
 }
 
 div#social-actions a#user {
   color: white;
+}
+
+div.how-to-participate {
+  float: left;
+  width: 154px;
+  text-align: left;
+  margin-top: 15px;
+}
+
+div.how-to-participate p {
+  margin-left: 10px;
+  margin-right: 5px;
+  font-family: "UniversLightOblique", Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+div.how-to-participate p a {
+  color: black;
+  text-decoration: none;
+}
+
+div.how-to-participate h4 {
+  font-family: "UniversLightOblique", Helvetica, sans-serif;
+  text-transform: uppercase;
+  background-color: #242424;
+  color: #fefffe;
+  font-size: 14px;
+
+  margin-bottom: 1px;
+  margin-left: 0px;
+  padding: 4px 2px 1px 15px;
+
+  display: inline-block;
+  padding-right: 15px;
+  font-weight: normal;
+}
+
+div.how-to-participate h4.last {
+  margin-bottom: 7px;
+}
+
+#apple {
+  margin-left: 33px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+#android {
+  margin-top: 10px;
 }
 
 footer > div {
@@ -340,3 +385,5 @@ div.admin {
   top: 50px;
   background-color: white;
 }
+
+
