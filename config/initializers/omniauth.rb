@@ -1,5 +1,4 @@
-require 'openid/store/filesystem'
-
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :you_tube, ENV['GOOGLE_CONSUMER_KEY'], ENV['GOOGLE_CONSUMER_SECRET']
+  provider :youtube, ENV['GOOGLE_CONSUMER_KEY'], ENV['GOOGLE_CONSUMER_SECRET'],
+    { :access_type => 'online', :approval_prompt => '' }
 end

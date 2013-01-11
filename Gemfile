@@ -1,10 +1,11 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
+gem 'rails', '3.0.19'
 gem 'rake', '0.8.7'
 gem 'mysql'
 gem 'thin'
 gem 'omniauth'
+gem 'omniauth-youtube'
 gem 'will_paginate'
 gem 'geokit'
 gem 'twitter'

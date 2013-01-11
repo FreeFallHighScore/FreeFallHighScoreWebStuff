@@ -48,7 +48,7 @@ class HomeController < ApplicationController
       @videos = @videos.drop_time
     end
 
-    @videos = @videos.all.paginate(:page => params[:page], :per_page => @per_page)
+    @videos = @videos.paginate(:page => params[:page], :per_page => @per_page)
   end
 
   def validate
