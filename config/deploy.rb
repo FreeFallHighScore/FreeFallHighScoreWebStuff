@@ -50,5 +50,10 @@ namespace :bundler do
   end
 end
 
+namespace :cache do
+  task :clear do
+    run "cd #{release_path} && bundle exec rake cache:clear"
+  end
+end
 
-after "deploy", "bundler:install", "deploy:migrate"
+after "deploy", "bundler:install", "deploy:migrate", "cache:clear"
