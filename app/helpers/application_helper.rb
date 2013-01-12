@@ -9,4 +9,8 @@ module ApplicationHelper
       "Third"
     end
   end
+
+  def query_to_string
+    params.map{|k,v| "#{k}:#{v}" }.join(":")
+  end
 end

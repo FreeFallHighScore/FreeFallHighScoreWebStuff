@@ -19,7 +19,7 @@
       <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
     </div>
 
-    <%= cache "Tweet" do %>
+    <%= cache "tweet", :expires_in => 10.minutes do %>
       <%
         begin
           tweets = Twitter::Search.new.q("freefallhighscore").fetch

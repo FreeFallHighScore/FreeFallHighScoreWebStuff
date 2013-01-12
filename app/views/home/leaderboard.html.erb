@@ -1,4 +1,4 @@
-<%= cache("leaderboard") do %>
+<%= cache("leaderboard:#{query_to_string}") do %>
   <div class="title">
     <h1>
       <a href="?sort_by=recent"><img src="/images/time.png"></a>
