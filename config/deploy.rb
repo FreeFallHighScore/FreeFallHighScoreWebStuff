@@ -36,4 +36,19 @@ namespace :logs do
   end
 end
 
-after "deploy", "deploy:migrate"
+namespace :bundler do
+  task :install, :roles => :app do
+    run "cd #{release_path} && bundle install --path vendor/gems"
+
+    on_rollback do
+      if previous_release
+        run "cd #{previous_release} && bundle install"
+      else
+        logger.important "no previous release to rollback to, rollback of bundler:install skipped"
+      end
+    end
+  end
+end
+
+
+after "deploy", "bundler:install", "deploy:migrate"
