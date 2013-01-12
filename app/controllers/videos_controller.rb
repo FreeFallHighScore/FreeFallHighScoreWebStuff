@@ -13,6 +13,8 @@ class VideosController < ApplicationController
   end
 
   def disable
+    Rails.cache.clear
+
     unless @video.update_attributes(:disabled => true)
       flash[:alert] = "Error updating video"
     end
@@ -23,6 +25,8 @@ class VideosController < ApplicationController
   end
 
   def enable
+    Rails.cache.clear
+
     unless @video.update_attributes(:disabled => false)
       flash[:alert] = "Error updating video"
     end

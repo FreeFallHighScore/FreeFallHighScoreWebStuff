@@ -10,6 +10,8 @@ namespace :video do
   task :import => :environment do |e|
     raise "HELL" unless ENV["YOUTUBE_DEV_TAG"] and ENV["YOUTUBE_DEV_KEY"]
 
+    Rails.cache.clear
+
     base_url = "https://gdata.youtube.com/feeds/api/videos/?#{ENV["YOUTUBE_DEV_TAG"]}&key=#{ENV["YOUTUBE_DEV_KEY"]}"
 
     url = base_url + "&max-results=50&alt=jsonc&v=2"

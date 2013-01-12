@@ -1,48 +1,50 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>FreeFall High Score<%= " - #{@page_title}" if @page_title %></title>
-    <%= stylesheet_link_tag :all %>
-    <%= javascript_include_tag :defaults %>
-    <%= csrf_meta_tag %>
+<% cache("#{controller.controller_name}##{controller.action_name}") do %>
+  <!doctype html>
+  <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+  <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+  <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>FreeFall High Score<%= " - #{@page_title}" if @page_title %></title>
+      <%= stylesheet_link_tag :all %>
+      <%= csrf_meta_tag %>
 
-    <meta name="description" content="">
-    <meta name="author" content="FreeFallHighScore, freefallhighscore@googlegroups.com">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
-  <body class="<%= controller.controller_name %> <%= controller.action_name %> <%= @page if @page %>">
-    <header>
-      <%= render "/layouts/header" %>
-    </header>
+      <meta name="description" content="">
+      <meta name="author" content="FreeFallHighScore, freefallhighscore@googlegroups.com">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+    </head>
+    <body class="<%= controller.controller_name %> <%= controller.action_name %> <%= @page if @page %>">
+      <header>
+        <%= render "/layouts/header" %>
+      </header>
 
-    <div id="main" role="main">
-      <div id="content">
-        <%= yield %>
-      </div>
-    </div>
-
-    <footer>
-      <% if current_user and current_user.admin? %>
-        <div class="admin">
-          <%= link_to "Moderate", moderate_path %><br/>
-          <%= link_to "Sign Out", signout_path %>
+      <div id="main" role="main">
+        <div id="content">
+          <%= yield %>
         </div>
-      <% end %>
-      <%= render '/layouts/footer' %>
-    </footer>
+      </div>
 
-    <%= render '/layouts/javascript' %>
+      <footer>
+        <% if current_user and current_user.admin? %>
+          <div class="admin">
+            <%= link_to "Moderate", moderate_path %><br/>
+            <%= link_to "Sign Out", signout_path %>
+          </div>
+        <% end %>
+        <%= render '/layouts/footer' %>
+      </footer>
 
-    <!--[if lt IE 7 ]>
-    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
-    <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
-    <![endif]-->
-    <div style="clear: both"></div>
-  </body>
-</html>
+      <%= render '/layouts/javascript' %>
+
+      <!--[if lt IE 7 ]>
+      <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+      <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+      <![endif]-->
+      <div style="clear: both"></div>
+      <%= javascript_include_tag :defaults %>
+    </body>
+  </html>
+<% end %>

@@ -1,32 +1,34 @@
-<div class="title">
-  <h1>
-    <a href="?sort_by=recent"><img src="/images/time.png"></a>
-    <a href="?sort_by=score"><img src="/images/score.png"></a>
-    <% if controller.class == UsersController && controller.action_name == "videos" %>
-      <%= @query %>'s drops
-    <% else %>
-      <% if @recent %>
-        Recent
+<%= cache("leaderboard") do %>
+  <div class="title">
+    <h1>
+      <a href="?sort_by=recent"><img src="/images/time.png"></a>
+      <a href="?sort_by=score"><img src="/images/score.png"></a>
+      <% if controller.class == UsersController && controller.action_name == "videos" %>
+        <%= @query %>'s drops
       <% else %>
-        Highscores
+        <% if @recent %>
+          Recent
+        <% else %>
+          Highscores
+        <% end %>
       <% end %>
+    </h1>
+    <%= form_tag search_path, :id => "search-bar-form", :class => "clearfix", :method => :get do %>
+      <div id="search">
+        <%= text_field_tag :query, "", :id => "video-query", :title => "Search", :value => @query, :placeholder => 'SEARCH BY USER' %>
+      </div>
     <% end %>
-  </h1>
-  <%= form_tag search_path, :id => "search-bar-form", :class => "clearfix", :method => :get do %>
-    <div id="search">
-      <%= text_field_tag :query, "", :id => "video-query", :title => "Search", :value => @query, :placeholder => 'SEARCH BY USER' %>
-    </div>
-  <% end %>
-</div>
-
-<% if @videos.any? %>
-  <div class="videos">
-    <% @videos.each do |v| %>
-      <%= render v %>
-    <% end %>
-    <%= render '/home/pagination' %>
   </div>
-<% else %>
-  <p>No videos to show at the moment. Please check back soon!</p>
-<% end %>
 
+  <% if @videos.any? %>
+    <div class="videos">
+      <% @videos.each do |v| %>
+        <%= render v %>
+      <% end %>
+      <%= render '/home/pagination' %>
+    </div>
+  <% else %>
+    <p>No videos to show at the moment. Please check back soon!</p>
+  <% end %>
+
+<% end %>
